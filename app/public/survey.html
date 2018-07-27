@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/friend.css">
+    <title>Survey</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid" style="background-color: #d9e6f2; border: 3px solid black">
+
+            <div class="row">
+                <div class="col-sm-4" id="center">
+                </div>
+                <div class="col-sm-2" id="center">
+                    <h3>Friend Survey</h3>
+                </div>
+                <div class="col-sm-2">
+                    <img src="assets/images/friendsSmaller.png" id="center" style="display: inherit">
+                </div>
+                <div class="col-sm-4" id="center">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="container" style="width: 960px">
+        <div class="form-group">
+            <label for="friendName">Name</label>
+            <input type="text" class="form-control" id="friendName" placeholder="Name">
+        </div>
+        <div class="form-group">
+            <label for="photoLink">Link to Photo Image:</label>
+            <input type="text" class="form-control" id="photoLink" placeholder="Photo URL">
+        </div>
+        <hr>
+        <div class="form-group">
+            <label for="answer0">I like to tinker with, and fix things with my hands.</label>
+            <select class="form-control" id="answer0">
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="answer1">I like to curl up on the couch with my cats and watch Grey's Anatomy marathons..</label>
+            <select class="form-control" id="answer1">
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="answer2">I floss every day at least once.</label>
+            <select class="form-control" id="answer2">
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="answer3">when I'm agitated, I listen to music to calm me</label>
+            <select class="form-control" id="answer3">
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="answer4">I would rather purchase something now on credit, than later after I have saved the funds to purchase it.</label>
+            <select class="form-control" id="answer4">
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="answer5">Star Wars is one of the greatest, most iconic film series of all time.</label>
+            <select class="form-control" id="answer5">
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="answer6">I would rather skirt around an issue than to be blunt with someone.</label>
+            <select class="form-control" id="answer6">
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="answer7">I can't get going in the morning without my coffee!</label>
+            <select class="form-control" id="answer7">
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="answer8">I like to be spontaneous in my work and play.</label>
+            <select class="form-control" id="answer8">
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="answer9">I have more faith in humankind than in religion</label>
+            <select class="form-control" id="answer9">
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+        <div class="row">
+            <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+        </div>
+
+    </div>
+
+      <!-- Modal -->
+<div class="modal fade" id="bestFriendModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <h2 id="bestFriendName"></h2>
+            <img id="bestFriendImg" src="https://ak.picdn.net/assets/cms/97e1dd3f8a3ecb81356fe754a1a113f31b6dbfd4-stock-photo-photo-of-a-common-kingfisher-alcedo-atthis-adult-male-perched-on-a-lichen-covered-branch-107647640.jpg
+  https://ak.picdn.net/assets/cms/97e1dd3f8a3ecb81356fe754a1a113f31b6dbfd4-stock-photo-photo-of-a-common-kingfisher-alcedo-atthis-adult-male-perched-on-a-lichen-covered-branch-107647640.jpg
+  " alt=""  height="250" width="250">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<script type="text/javascript">
+
+
+    $("#submit").on("click", function () {
+        event.preventDefault();
+        var formData = {
+            friendName: $("#friendName").val().trim(),
+            photo: $("#photoLink").val().trim(),
+            scores: [$("#answer0").val(), $("#answer1").val(), $("#answer2").val(), $("#answer3").val(), $("#answer4").val(), $("#answer5").val(), $("#answer6").val(), $("#answer7").val(), $("#answer8").val(), $("#answer9").val()]
+        };
+
+        // console.log(formData);
+
+        $.post("/api/friends", formData, function (data) {
+            // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+             $("#bestFriendName").text(data.name);
+                $('#bestFriendImg').attr("src", data.photo);
+                // Show the modal with the best match 
+                $("#bestFriendModal").modal('toggle');
+        });
+
+    });
+
+
+</script>
+
+
+</html>

@@ -1,0 +1,32 @@
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+  
+    display: flex;
+    align-items: center;
+  }
+
+  .vl {
+    border-left: 3px solid black;
+    height: 100px;
+}
+
+body {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+@media only screen and (max-width: 767px) {
+    #center {
+        display: block;
+        text-align: center;
+        margin: 0 auto
+    }
+    }
+    
+@media only screen and (max-width: 575px) {
+        #center {
+            display: block;
+            text-align: center;
+            margin: 0 auto
+        }
+        }
