@@ -32,6 +32,7 @@ module.exports = function (app) {
         }
         // //best match will give the smallest values 
         var bestMatch = friends[allDifferences.indexOf(Math.min.apply(null, allDifferences))];
+        
         res.send(bestMatch);
 
         friends.push(newFriend);

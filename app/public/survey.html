@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/friend.css">
     <title>Survey</title>
 </head>
@@ -151,28 +152,33 @@
 
     </div>
 
-      <!-- Modal -->
-<div class="modal fade" id="bestFriendModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+    <!-- Modal -->
+    <div class="modal fade" id="bestFriendModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-body" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="exampleModalLongTitle">Your Friend Match!</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div>
+                    <div class="container">
+                        <div class="row">
+                            <strong><h2 id="bestFriendName"></h2></strong>
+                        </div>
+                        <div class="row">
+                            <img class="img-center" id="bestFriendImg" src="https://www.androidcentral.com/sites/androidcentral.com/files/styles/large/public/article_images/2017/10/pumpkin-portrait.jpg?itok=gDW6c56l"
+                                alt="Hello World">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-            <h2 id="bestFriendName"></h2>
-            <img id="bestFriendImg" src="https://ak.picdn.net/assets/cms/97e1dd3f8a3ecb81356fe754a1a113f31b6dbfd4-stock-photo-photo-of-a-common-kingfisher-alcedo-atthis-adult-male-perched-on-a-lichen-covered-branch-107647640.jpg
-  https://ak.picdn.net/assets/cms/97e1dd3f8a3ecb81356fe754a1a113f31b6dbfd4-stock-photo-photo-of-a-common-kingfisher-alcedo-atthis-adult-male-perched-on-a-lichen-covered-branch-107647640.jpg
-  " alt=""  height="250" width="250">
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-      </div>
     </div>
-  </div>
 
 </body>
 
@@ -191,10 +197,12 @@
 
         $.post("/api/friends", formData, function (data) {
             // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-             $("#bestFriendName").text(data.name);
-                $('#bestFriendImg').attr("src", data.photo);
-                // Show the modal with the best match 
-                $("#bestFriendModal").modal('toggle');
+            $("#bestFriendName").text(data.friendName);
+            $('#bestFriendImg').attr("src", data.photo);
+
+            console.log(data);
+            // Show the modal with the best match 
+            $("#bestFriendModal").modal('toggle');
         });
 
     });
